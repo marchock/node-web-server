@@ -53,13 +53,13 @@ app.get('/about', (req, res) => {
         pageTitle: 'About page'
     });
 });
-//
-//
-// app.get('/bad', (req, res) => {
-//     res.send({
-//         error: 'unable to handle the request'
-//     });
-// })
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects page',
+        welcomeMessage: 'Welcome to this projects page'
+    });
+});
 
 
 app.listen(port, () => {
